@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Andrei Silva | Front-End Developer</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;family=Outfit:wght@700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-zinc-900 dark:text-zinc-100 font-body transition-colors duration-300">
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 md:py-6 max-w-7xl mx-auto w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="flex items-center gap-1 sm:gap-2">
+            <span class="material-icons text-primary text-xl">blur_on</span>
+            <span class="font-display font-bold text-lg md:text-xl tracking-tight uppercase">Andrei</span>
+        </div>
+        <div class="hidden md:flex items-center gap-12">
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Início</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="servicos.html">Serviços</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Portfólio</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="https://wa.me/71981251733?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">Contato</a>
+        </div>
+        <div class="flex items-center gap-2 md:gap-4">
+            <div class="flex items-center gap-1.5 md:gap-2 bg-zinc-100 dark:bg-zinc-800 px-2.5 md:px-3 py-1 md:py-1.5 rounded-full">
+                <span class="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">
+                    <span class="hidden sm:inline">Open to work</span>
+                    <span class="sm:hidden">Disponível</span>
+                </span>
+            </div>
+            <button class="p-1.5 md:p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                onclick="document.documentElement.classList.toggle('dark')">
+                <span class="material-icons text-sm dark:hidden">dark_mode</span>
+                <span class="material-icons text-sm hidden dark:block text-yellow-400">light_mode</span>
+            </button>
+        </div>
+    </nav>
+    <main class="relative pt-24 md:pt-32 pb-32 md:pb-20 min-h-screen flex flex-col items-center overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center -z-10 select-none opacity-5 dark:opacity-[0.03] pt-16 md:pt-0">
+            <h1 class="text-[35vw] md:text-[30vw] font-display font-black uppercase hero-title">ANDREI</h1>
+        </div>
+        <div class="relative z-10 text-center mb-6 md:mb-8 px-2 md:px-4 mt-4 md:mt-0 max-w-[100vw] overflow-hidden">
+            <h1 class="text-primary font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-[140px] uppercase hero-title flex flex-wrap items-center justify-center min-h-[1em]">
+                <span id="typewriter-text" class="whitespace-nowrap"></span>
+                <span class="inline-block w-1.5 sm:w-2 md:w-3 lg:w-4 bg-primary h-8 sm:h-10 md:h-16 lg:h-32 ml-1.5 md:ml-4 animate-pulse"></span>
+            </h1>
+        </div>
+        <div
+            class="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 gap-8 md:gap-12">
+            <div class="w-full md:w-1/3 order-2 md:order-1 text-center md:text-left">
+                <p class="text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6 md:mb-8 mx-auto max-w-sm md:max-w-none">
+                    Olá! Sou um Desenvolvedor Front-End focado em criar sites modernos, responsivos e fáceis de usar.
+                </p>
+                <a class="inline-flex items-center gap-2 md:gap-3 font-display font-bold text-lg md:text-xl uppercase tracking-widest hover:text-primary transition-colors group"
+                    href="https://wa.me/71981251733?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento. " target="_blank">
+                    // Contate-me
+                    <span class="material-icons group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </a>
+            </div>
+            <div class="relative w-full md:w-1/3 order-1 md:order-2 flex justify-center">
+                <div class="relative z-10 w-[220px] h-[220px] sm:w-[266px] sm:h-[266px] md:w-[380px] md:h-[390px]">
+                    <div class="absolute inset-0 -z-10 opacity-20 dark:opacity-40"
+                        style="background-image: radial-gradient(#901414 1px, transparent 1px); background-size: 15px 15px;">
+                    </div>
+                    <img alt="Andrei Profile"
+                        class="w-full h-full object-cover object-top gradient-mask grayscale-[0.2]"
+                        src="./hero/hero1.png" />
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 order-3 text-center md:text-right">
+                <ul class="space-y-3 md:space-y-4 font-body">
+                    <li
+                        class="text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 cursor-pointer transition-colors text-lg md:text-xl">
+                        Front-End Developer</li>
+                    <li
+                        class="text-zinc-900 dark:text-zinc-100 font-bold text-lg md:text-xl border-b-2 border-primary inline-block md:block md:border-b-0 pb-1 md:pb-0">
+                        Landing Pages</li>
+                    <li
+                        class="text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 cursor-pointer transition-colors text-lg md:text-xl">
+                        Portfolio Websites</li>
+                    <li
+                        class="text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 cursor-pointer transition-colors text-lg md:text-xl">
+                        Responsive Design</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-4 md:bottom-10 left-0 right-0 overflow-hidden py-4 md:py-8 border-t border-zinc-100 dark:border-zinc-800 bg-white/50 dark:bg-black/50 backdrop-blur-sm">
+            <div class="flex animate-scroll whitespace-nowrap gap-8 md:gap-24 px-4 md:px-12 items-center">
+                
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">HTML</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">CSS</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">JavaScript</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-8 bg-white rounded-full">
+                    <span class="font-display font-bold text-xl">GitHub</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">HTML</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">CSS</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">JavaScript</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-8 bg-white rounded-full">
+                    <span class="font-display font-bold text-xl">GitHub</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">HTML</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">CSS</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-8">
+                    <span class="font-display font-bold text-xl">JavaScript</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 grayscale hover:grayscale-0 transition-all cursor-default group">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-8 bg-white rounded-full">
+                    <span class="font-display font-bold text-xl">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-red-500 to-primary opacity-20"></div>
+
+</body>
+
+</html>

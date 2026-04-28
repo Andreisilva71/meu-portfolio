@@ -1,0 +1,32 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+
+.hero-title {
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+}
+
+.text-outline-gray {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #d1d5db;
+}
+
+.dark .text-outline-gray {
+    -webkit-text-stroke-color: #374151;
+}
+
+.gradient-mask {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
