@@ -30,3 +30,13 @@
 .gradient-mask {
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
+
+@keyframes crossfade {
+    0%, 45% { opacity: 1; }
+    50%, 95% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.animate-crossfade {
+    animation: crossfade 5s infinite;
+}

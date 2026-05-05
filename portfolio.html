@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfólio | Andrei Silva</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;family=Outfit:wght@700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-zinc-900 dark:text-zinc-100 font-body transition-colors duration-300">
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 md:py-6 max-w-7xl mx-auto w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <a href="index.html" class="flex items-center gap-1 sm:gap-2 group">
+            <span class="material-icons text-primary text-xl group-hover:rotate-180 transition-transform duration-500">blur_on</span>
+            <span class="font-display font-bold text-lg md:text-xl tracking-tight uppercase group-hover:text-primary transition-colors">Andrei</span>
+        </a>
+        <div class="hidden md:flex items-center gap-12">
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Início</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="servicos.html">Serviços</a>
+            <a class="text-sm font-medium text-primary transition-colors border-b border-primary pb-1" href="portfolio.html">Portfólio</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="https://wa.me/71981251733?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">Contato</a>
+        </div>
+        <div class="flex items-center gap-2 md:gap-4">
+            <div class="flex items-center gap-1.5 md:gap-2 bg-zinc-100 dark:bg-zinc-800 px-2.5 md:px-3 py-1 md:py-1.5 rounded-full">
+                <span class="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">
+                    <span class="hidden sm:inline">Open to work</span>
+                    <span class="sm:hidden">Disponível</span>
+                </span>
+            </div>
+            <button class="p-1.5 md:p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                onclick="document.documentElement.classList.toggle('dark')">
+                <span class="material-icons text-sm dark:hidden">dark_mode</span>
+                <span class="material-icons text-sm hidden dark:block text-yellow-400">light_mode</span>
+            </button>
+        </div>
+    </nav>
+    <main class="relative pt-24 md:pt-32 pb-32 min-h-screen flex flex-col items-center max-w-7xl mx-auto px-4 md:px-8 w-full overflow-hidden">
+        <!-- Background decorative text -->
+        <div class="absolute top-40 inset-x-0 flex items-center justify-center -z-10 select-none opacity-5 dark:opacity-[0.03] pt-16 md:pt-0">
+            <h1 class="text-[25vw] md:text-[20vw] font-display font-black uppercase hero-title text-center leading-none">PORTFÓLIO</h1>
+        </div>
+        
+        <div class="w-full text-center mb-16 md:mb-20 mt-4 md:mt-12 relative z-10 overflow-hidden">
+            <h1 class="text-primary font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase hero-title tracking-tight mb-8">
+                Portfólio
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                Confira alguns dos meus projetos recentes. Cada trabalho é focado em design moderno, performance e experiência do usuário.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full mb-20 relative z-10">
+            <!-- Project 1 -->
+            <div class="group bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5 relative overflow-hidden flex flex-col h-full">
+                <div class="w-full aspect-video overflow-hidden bg-zinc-200 dark:bg-zinc-800 border-b border-zinc-200 dark:border-zinc-800 relative">
+                    <img src="./imagens/alee-portfolio2.png" alt="Alee Portfolio Modelo 2" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                    <img src="./imagens/alee-portfolio.png" alt="Alee Portfolio Modelo 1" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 animate-crossfade">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10"></div>
+                </div>
+                <div class="p-6 md:p-8 flex flex-col flex-grow">
+                    <h3 class="font-display font-bold text-2xl md:text-3xl mb-4 text-zinc-900 dark:text-zinc-100">Alee Portfólio</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed font-body text-base lg:text-lg mb-8 flex-grow">
+                        Um modelo de portfólio moderno, responsivo e focado na apresentação elegante de projetos. Desenvolvido para proporcionar uma ótima experiência ao usuário.
+                    </p>
+                    <a href="https://portfolio-alee-modelo.vercel.app/" target="_blank" class="inline-flex items-center justify-center gap-2 font-display font-bold text-sm md:text-base uppercase tracking-widest text-primary border border-primary/30 hover:border-primary hover:bg-primary/5 py-3 px-6 rounded-xl transition-all duration-300 group/link mt-auto w-full sm:w-auto">
+                        Acessar Projeto
+                        <span class="material-icons group-hover/link:translate-x-1 transition-transform text-lg">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="mt-4 mb-16 md:mb-20">
+             <a class="inline-flex items-center gap-3 font-display font-bold text-lg md:text-xl uppercase tracking-widest text-zinc-900 dark:text-zinc-100 hover:text-primary transition-all duration-300 group"
+                href="https://wa.me/71981251733?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">
+                // Iniciar Seu Projeto
+                <span class="material-icons group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+    </main>
+    <div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-red-500 to-primary opacity-20 z-50"></div>
+</body>
+
+</html>
