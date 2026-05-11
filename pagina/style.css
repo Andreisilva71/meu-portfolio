@@ -55,3 +55,53 @@
 .delay-3 { animation-delay: 3s; }
 .delay-6 { animation-delay: 6s; }
 .delay-9 { animation-delay: 9s; }
+
+/* --- New Responsiveness & UI Improvements --- */
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body {
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fluid Typography for Hero */
+@media (max-width: 640px) {
+    .hero-title-responsive {
+        font-size: clamp(3rem, 15vw, 5rem) !important;
+    }
+    
+    .bg-text-responsive {
+        font-size: 35vw !important;
+    }
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Scrollbar styling for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #90141433;
+    border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #90141455;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #901414;
+}

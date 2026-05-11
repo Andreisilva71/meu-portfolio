@@ -11,6 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;family=Outfit:wght@700;900&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
@@ -18,6 +25,25 @@
 
 <body
     class="bg-background-light dark:bg-background-dark text-zinc-900 dark:text-zinc-100 font-body transition-colors duration-300">
+    
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white dark:bg-zinc-950 translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu" class="absolute top-6 right-6 p-2 rounded-full bg-zinc-100 dark:bg-zinc-900">
+            <span class="material-icons">close</span>
+        </button>
+        <a class="text-2xl font-display font-bold hover:text-primary transition-colors" href="index.html">Início</a>
+        <a class="text-2xl font-display font-bold hover:text-primary transition-colors" href="servicos.html">Serviços</a>
+        <a class="text-2xl font-display font-bold text-primary transition-colors" href="portfolio.html">Portfólio</a>
+        <a class="text-2xl font-display font-bold hover:text-primary transition-colors" href="https://wa.me/71981251733?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">Contato</a>
+        
+        <div class="flex items-center gap-4 mt-8">
+            <button class="theme-toggle p-3 rounded-full bg-zinc-100 dark:bg-zinc-900 transition-colors">
+                <span class="material-icons dark:hidden">dark_mode</span>
+                <span class="material-icons hidden dark:block text-yellow-400">light_mode</span>
+            </button>
+        </div>
+    </div>
+
     <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 md:py-6 max-w-7xl mx-auto w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
         <a href="index.html" class="flex items-center gap-1 sm:gap-2 group">
             <span class="material-icons text-primary text-xl group-hover:rotate-180 transition-transform duration-500">blur_on</span>
@@ -30,36 +56,36 @@
             <a class="text-sm font-medium hover:text-primary transition-colors" href="https://wa.me/71981251733?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">Contato</a>
         </div>
         <div class="flex items-center gap-2 md:gap-4">
-            <div class="flex items-center gap-1.5 md:gap-2 bg-zinc-100 dark:bg-zinc-800 px-2.5 md:px-3 py-1 md:py-1.5 rounded-full">
+            <div class="hidden sm:flex items-center gap-1.5 md:gap-2 bg-zinc-100 dark:bg-zinc-800 px-2.5 md:px-3 py-1 md:py-1.5 rounded-full">
                 <span class="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full animate-pulse"></span>
-                <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">
-                    <span class="hidden sm:inline">Open to work</span>
-                    <span class="sm:hidden">Disponível</span>
-                </span>
+                <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">Open to work</span>
             </div>
-            <button class="p-1.5 md:p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-                onclick="document.documentElement.classList.toggle('dark')">
+            <button class="theme-toggle hidden md:flex p-1.5 md:p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                 <span class="material-icons text-sm dark:hidden">dark_mode</span>
                 <span class="material-icons text-sm hidden dark:block text-yellow-400">light_mode</span>
             </button>
+            <button id="menu-btn" class="md:hidden p-1.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                <span class="material-icons">menu</span>
+            </button>
         </div>
     </nav>
-    <main class="relative pt-24 md:pt-32 pb-32 min-h-screen flex flex-col items-center max-w-7xl mx-auto px-4 md:px-8 w-full overflow-hidden">
+
+    <main class="relative pt-24 md:pt-32 pb-32 min-h-screen flex flex-col items-center max-w-7xl mx-auto px-4 md:px-8 w-full">
         <!-- Background decorative text -->
-        <div class="absolute top-40 inset-x-0 flex items-center justify-center -z-10 select-none opacity-5 dark:opacity-[0.03] pt-16 md:pt-0">
-            <h1 class="text-[25vw] md:text-[20vw] font-display font-black uppercase hero-title text-center leading-none">PORTFÓLIO</h1>
+        <div class="absolute top-40 inset-x-0 flex items-center justify-center -z-10 select-none opacity-5 dark:opacity-[0.03] pt-16 md:pt-0 pointer-events-none">
+            <h1 class="text-[25vw] md:text-[20vw] font-display font-black uppercase hero-title text-center leading-none bg-text-responsive">PORTFÓLIO</h1>
         </div>
         
-        <div class="w-full text-center mb-16 md:mb-20 mt-4 md:mt-12 relative z-10 overflow-hidden">
-            <h1 class="text-primary font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase hero-title tracking-tight mb-8">
+        <div class="w-full text-center mb-16 md:mb-20 mt-4 md:mt-12 relative z-10">
+            <h1 class="text-primary font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-[100px] uppercase hero-title hero-title-responsive tracking-tight mb-8">
                 Portfólio
             </h1>
-            <p class="text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed px-4">
                 Confira alguns dos meus projetos recentes. Cada trabalho é focado em design moderno, performance e experiência do usuário.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full mb-20 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 w-full mb-20 relative z-10">
             <!-- Project 1 -->
             <div class="group bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5 relative overflow-hidden flex flex-col h-full">
                 <div class="w-full aspect-video overflow-hidden bg-zinc-200 dark:bg-zinc-800 border-b border-zinc-200 dark:border-zinc-800 relative">
