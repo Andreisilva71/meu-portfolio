@@ -40,3 +40,18 @@
 .animate-crossfade {
     animation: crossfade 5s infinite;
 }
+
+@keyframes crossfade4 {
+    0%, 25% { opacity: 1; }
+    30%, 95% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.animate-crossfade-4 {
+    animation: crossfade4 12s infinite;
+}
+
+.delay-0 { animation-delay: 0s; }
+.delay-3 { animation-delay: 3s; }
+.delay-6 { animation-delay: 6s; }
+.delay-9 { animation-delay: 9s; }
